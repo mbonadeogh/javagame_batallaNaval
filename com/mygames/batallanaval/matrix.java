@@ -440,13 +440,21 @@ public class matrix {
 	Retorna la matriz inversa de la matriz "a" pasada como parámetro.
 	*/
 	public double [][] inversa(double a[][]) {
+		double c[][] = new double[a.length][a[0].length];
 		double det = determinante(a);
-		double c[][] = adjunta(a);
-		for (int i=0; i < a.length; i++) {
-			for (int j=0; j < a.length; j++) {
-				c[i][j]=c[i][j] / det;
+		if (a.length > 1) {
+			c = adjunta(a);
+			for (int i=0; i < a.length; i++) {
+				for (int j=0; j < a.length; j++) {
+					c[i][j]=c[i][j] / det;
+				}
+			}	
+		} else {
+			if (det!=0.0) {
+				c[0][0]=1.0/det;
 			}
-		}	
+		}
+
 		return c;		
 	}
 
