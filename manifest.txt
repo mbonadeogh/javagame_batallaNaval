@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: Marcelo Bonadeo
+Created-By: 18.0.1 (Oracle Corporation)
+Class-Path: .
+Main-Class: com.mygames.batallanaval.BatallaNaval
+SplashScreen-Image: com/mygames/batallanaval/naval_war_battle.jpg
